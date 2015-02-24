@@ -1,0 +1,105 @@
+@import "compass/css3";
+
+* {
+    @include box-sizing(border-box);
+}
+
+body {
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+section {
+    padding: 0 50px;
+}
+
+section.cover {
+    padding: 0;
+
+    h2 {
+        margin: 0 50px;
+    }
+}
+
+.cover #skill-tree {
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    height: 80vh;
+    background-position: center !important;
+    background: url("../img/skill-tree.jpg");
+}
+
+#skill-tree-section {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #f1fafa;
+}
+
+#skill-1 {
+    top: 40px;
+}
+
+#skill-2 {
+    top: 25%;
+}
+
+#skill-3 {
+    top: 50%;
+}
+
+#skill-4 {
+    top: 75%;
+}
+.skillset {
+    left: 50px;
+    position: absolute;
+    list-style-type: none;
+    padding: 0;
+    width: 20%;
+
+    h3 {
+        font-size: 12px;
+        border-bottom: 2px solid black;
+    }
+
+    li {
+        font-size: 10px;
+    }
+}
+
+h1 {
+    font-family: 'Crete Round', serif;
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    margin: 10px auto;
+}
+
+h2 {
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+}
+
+p {
+    margin-bottom: 40px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff0096;
+
+    &:hover {
+        border-bottom: 2px solid;
+    }
+}
+
+#contact-methods ul {
+    font-size: 18px;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        margin-bottom: 18px;
+    }
+}
