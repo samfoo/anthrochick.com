@@ -6,7 +6,11 @@
 
 body {
     margin: 0 auto;
+}
+
+.boxed {
     max-width: 768px;
+    margin: 0 auto;
 }
 
 section {
@@ -21,12 +25,216 @@ section.cover {
     }
 }
 
-.cover #skill-tree {
+.clearfix {
+    clear: both;
+}
+
+.overview {
+    float: left;
+    width: 50%;
+    padding-right: 50px;
+
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.approach {
+    h4 {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-top: 5px;
+    }
+}
+
+#user-flow {
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    height: 30vh;
+    background-position: center !important;
+    background: url("../img/books-and-crafts/user-flow.png");
+    margin: 50px auto;
+}
+
+.new-scenario {
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 20px;
+
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+#client-details {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        float: left;
+        width: 33%;
+        padding: 10px;
+
+        &:nth-child(1) {
+            text-align: left;
+        }
+
+        &:nth-child(2) {
+            text-align: center;
+        }
+
+        &:nth-child(3) {
+            text-align: right;
+        }
+    }
+}
+
+.hero-ish {
+    width: 100%;
+    display: block;
+}
+
+#profile {
+    max-width: 250px;
+    float: right;
+}
+
+.case-study {
+    border: 1px solid #e5e5e5;
+    background: white;
+    position: relative;
+    height: 170px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    transition: 500ms;
+
+    &.coming-soon {
+        opacity: 0.4;
+        cursor: default;
+    }
+
+    @media only screen and (max-width: 500px) {
+        height: auto;
+        padding: 0;
+    }
+
+    &:hover {
+        transition: 500ms;
+
+        h3 {
+            transition: 500ms;
+            bottom: 60px;
+        }
+
+        h4 {
+            transition: 500ms;
+            bottom: 15px;
+            opacity: 1;
+        }
+    }
+
+    .logo {
+        @media only screen and (max-width: 500px) {
+            position: static;
+            transform: none;
+            width: 70%;
+            height: 20vh;
+            margin: 15px auto;
+        }
+
+        position: absolute;
+        right: 0;
+        left: 70%;
+        height: 80%;
+        top: 50%;
+        transform: translate(0%,-50%);
+        background-repeat: no-repeat !important;
+        background-size: contain !important;
+        background-position: center !important;
+        background-color: white !important;
+    }
+
+    h3 {
+        @media only screen and (max-width: 500px) {
+            position: static;
+            padding: 0 15px;
+        }
+
+        font-family: 'Crete Round', serif;
+        margin: 0;
+        font-weight: 300;
+        position: absolute;
+        left: 15px;
+        font-size: 24px;
+        bottom: 30px;
+        transition: 500ms;
+    }
+
+    h4 {
+        @media only screen and (max-width: 500px) {
+            position: static;
+            opacity: 1;
+            padding: 15px;
+            margin: 0;
+            white-space: normal;
+            overflow: visible;
+            width: 100%;
+        }
+
+        font-weight: normal;
+        opacity: 0;
+        position: absolute;
+        left: 15px;
+        bottom: -15px;
+        transition: 500ms;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 60%;
+    }
+
+    &#books-and-crafts .logo {
+        background: url("../img/books-and-crafts-logo.png");
+    }
+
+    &#namegear .logo {
+        background: url("../img/namegear-logo.png");
+    }
+
+    &#transport-nsw .logo {
+        background: url("../img/transport-nsw-logo.png");
+    }
+}
+
+#design-process {
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    height: 50vh;
+    background-position: center !important;
+    background: url("../img/process.png");
+}
+
+#skill-tree {
     background-repeat: no-repeat !important;
     background-size: contain !important;
     height: 80vh;
     background-position: center !important;
     background: url("../img/skill-tree.jpg");
+}
+
+#case-studies {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #f4f6f7;
+    margin-bottom: 50px;
 }
 
 #skill-tree-section {
@@ -68,14 +276,35 @@ section.cover {
     }
 }
 
+#testimonials cite {
+    @media only screen and (max-width: 500px) {
+        float: none;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    display: block;
+    margin-bottom: 20px;
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+
 h1 {
     font-family: 'Crete Round', serif;
     font-size: 50px;
-    border-bottom: 2px solid black;
     margin: 10px auto;
 }
 
 h2 {
+    font-size: 22px;
+    font-family: Helvetica, sans-serif;
+    border-top: 4px solid black;
+    padding-top: 15px;
+    margin-top: 0;
+}
+
+h3 {
     font-size: 18px;
     font-family: Helvetica, sans-serif;
 }
@@ -95,6 +324,7 @@ a {
 }
 
 #contact-methods ul {
+    text-align: center;
     font-size: 18px;
     list-style-type: none;
     padding: 0;
@@ -102,4 +332,18 @@ a {
     li {
         margin-bottom: 18px;
     }
+}
+
+#linkedin {
+    font-size: 52px;
+}
+
+.credit {
+    .face {
+        float: left;
+        margin-right: 10px;
+    }
+
+    font-size: 14px;
+    margin-top: 20px;
 }
