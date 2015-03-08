@@ -50,6 +50,20 @@ section.cover {
         transform: translate(0, -50%);
     }
 
+    #blurry-cover {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: 0 50% !important;
+        background-attachment: fixed !important;
+        background: url(../img/zoe-hero-alt-blur.jpg);
+    }
+
     h1 {
         font-weight: normal;
         font-family: 'Open Sans', sans-serif;
@@ -158,6 +172,10 @@ section.cover {
     background: url(../img/zoe-interview.jpg);
 }
 
+#juanny {
+    background: url(../img/juanny.jpg);
+}
+
 #personas {
     background: url(../img/persona-drawing.jpg);
 }
@@ -197,7 +215,6 @@ h3.subsection {
 
 .overview {
     margin-top: 20px;
-    padding-right: 50px;
 
     @media only screen and (max-width: 500px) {
         float: none;
@@ -215,9 +232,9 @@ h3.subsection {
 
     p, ul {
         margin-top: 0;
-        float: left;
         margin-bottom: 0;
         padding: 0;
+        float: left;
     }
 
     ul {
@@ -235,13 +252,14 @@ h3.subsection {
     }
 }
 
-#user-flow {
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    height: 30vh;
-    background-position: center !important;
-    background: url("../img/books-and-crafts/user-flow.png");
-    margin: 50px auto;
+#books-and-crafts-user-flow {
+    img {
+        width: 100%;
+        max-width: 1024px;
+        display: block;
+        margin: 0 auto;
+        padding: 50px;
+    }
 }
 
 .new-scenario {
@@ -255,6 +273,21 @@ h3.subsection {
         width: 100%;
         padding: 0;
     }
+}
+
+.prototype a {
+    font-weight: 300;
+    font-size: 12px;
+    font-style: italic;
+
+    &:hover {
+        text-decoration: none !important;
+        border: none;
+    }
+}
+
+.proto {
+    text-align: center;
 }
 
 #client-details {
@@ -285,6 +318,11 @@ h3.subsection {
     display: block;
 }
 
+.hero-ish-container {
+    background-color: #f6edf6;
+    padding: 0 20px 20px 20px;
+}
+
 #profile {
     max-width: 250px;
     float: right;
@@ -304,7 +342,8 @@ h3.subsection {
     .desc {
         width: 50%;
         float: left;
-        padding-left: 20px;
+        padding-left: 50px;
+        margin-bottom: 30px;
 
         h3 {
             text-transform: none;
@@ -327,7 +366,8 @@ h3.subsection {
     }
 
     &#books-and-crafts .logo {
-        background: url("../img/books-and-crafts-logo.png");
+        background: url("../img/bac.png");
+        background-color: darken(#fbfcfc, 5%);
     }
 
     &#namegear .logo {

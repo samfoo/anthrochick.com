@@ -3,6 +3,8 @@ title: Zoë Rosen
 ---
 
 <section id="zoe-rosen" class="cover">
+    <div id="blurry-cover"></div>
+
     <div id="me">
         <h1>
             Hi, I'm Zoë Rosen.
@@ -89,6 +91,38 @@ title: Zoë Rosen
 
             <p>
             <a href="namegear.html">view project <i class="fa fa-arrow-circle-o-right"></i></a>
+            </p>
+        </div>
+
+
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="case-study coming-soon" id="books-and-crafts">
+        <div class="logo"></div>
+
+        <div class="desc">
+            <h3>
+                Books &amp; Crafts
+            </h3>
+
+            <h4>Ultra-lightweight mobile prototype</h4>
+
+            <p>
+            Books &amp; Crafts creates personalised stationary. They're a small
+            business who are transitioning to something bigger. As the business
+            continues to grow they face greater difficulties tracking orders and
+            managing clients.
+            </p>
+
+            <p>
+            Books &amp; Crafts wanted to improve their order managment, but the owner
+            is always on the road. They asked me to rapidly prototype a mobile
+            application to solve their problem.
+            </p>
+
+            <p>
+            <a href="books-and-crafts.html">view project <i class="fa fa-arrow-circle-o-right"></i></a>
             </p>
         </div>
 
@@ -186,3 +220,10 @@ title: Zoë Rosen
     </div>
 </section>
 
+<script>
+    $(window).scroll(function() {
+        var oVal;
+        oVal = $(window).scrollTop() / 400;
+        return $("#blurry-cover").css("opacity", oVal);
+    });
+</script>
