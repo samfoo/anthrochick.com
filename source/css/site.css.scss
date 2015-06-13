@@ -11,15 +11,30 @@ body {
 .boxed {
     max-width: 768px;
     margin: 0 auto;
-    margin-top: 50px;
 
     &.after-title {
         margin-top: 0;
     }
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
-section {
-    padding: 0 50px;
+.button {
+    $bg: red;
+    display: inline-block;
+    background: $bg;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+
+    &:hover {
+        background: lighten($bg, 20%);
+        border-bottom: none;
+    }
 }
 
 section.cover {
@@ -30,52 +45,164 @@ section.cover {
     }
 }
 
+#clients {
+    &> div {
+        text-align: center;
+    }
+
+    img {
+        margin: 10px;
+        display: inline-block;
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        img {
+            max-height: 80px;
+            max-width: 80px;
+        }
+    }
+}
+
+#dreams {
+    background: #9c27b0;
+    color: white;
+    padding: 50px;
+    padding-bottom: 80px;
+    h1 {
+        text-align: left;
+    }
+
+    h2 {
+        text-transform: none;
+        margin: 0;
+        text-align: left;
+    }
+}
+
+#what-is-anthro {
+    margin-top: 50px;
+}
+
+#in-short {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: white;
+    background: #212121;
+
+    h3 {
+        font-style: italic;
+        text-transform: none;
+    }
+
+    h2 {
+        text-transform: none;
+        text-align: center;
+        font-size: 60px;
+    }
+}
+
+h1#header {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 30px;
+    }
+}
+
+#menu {
+    border: 2px solid white;
+    border-left: none;
+    border-right: none;
+    padding: 5px 0;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+    & > div {
+        margin: 0 auto;
+    }
+
+    a {
+        color: black;
+
+        &:hover {
+            color: #8bc34a;
+        }
+    }
+    li {
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 80px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.current {
+            border-bottom: 5px solid #8bc34a;
+        }
+
+        @media only screen and (max-width: 768px) {
+            display: block;
+            margin: none;
+            width: 100%;
+            padding: 15px 0;
+
+            &.current {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
 #zoe-rosen {
     font-family: 'Open Sans', sans-serif;
-    position: relative;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: 0 50% !important;
-    background-attachment: fixed !important;
-    background: url(../img/zoe-hero-alt.jpg);
-    height: 75vh;
+    background: #03a9f4;
     color: white;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
     #me {
-        position: absolute;
         margin: 0 auto;
-        top: 50%;
+        padding-top: 100px;
+        padding-bottom: 100px;
         width: 100%;
-        transform: translate(0, -50%);
+
+        p {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            padding: 30px 10px;
+            text-align: center;
+        }
     }
 
-    #blurry-cover {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        opacity: 0;
-        background-repeat: no-repeat !important;
-        background-size: cover !important;
-        background-position: 0 50% !important;
-        background-attachment: fixed !important;
-        background: url(../img/zoe-hero-alt-blur.jpg);
-    }
-
-    h1 {
+    .hi {
+        display: block;
+        border: none;
+        font-family: "Open Sans";
+        text-align: left;
+        font-size: 70px;
+        margin: 10px auto;
         font-weight: normal;
         font-family: 'Open Sans', sans-serif;
         margin-bottom: 0;
+        text-transform: none;
+
+        @media only screen and (max-width: 768px) {
+            text-align: center;
+        }
     }
 
     p {
         margin-top: 0;
         font-weight: 300;
-        font-style: italic;
         font-size: 32px;
-        text-align: center;
     }
 }
 
@@ -153,12 +280,11 @@ section.cover {
 }
 
 #customer-journey-map {
-    background-repeat: no-repeat !important;
-    background-size: contain !important;
-    background-position: 50% 50% !important;
-    height: 60vh;
-    background: url(../img/customer-journey-map.png);
     margin: 50px auto;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .parallax {
@@ -176,12 +302,86 @@ section.cover {
     background: url(../img/juanny.jpg);
 }
 
+#natgeo {
+    background: url(../img/zoe-rs-color.png);
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: right;
+
+    .relative {
+        position: relative;
+        height: 50vh;
+    }
+
+    .abs {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin: 0;
+        text-transform: none;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 24px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+#parrots {
+    height: 50vh;
+    background: url(../img/cockatoo-color.png);
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center;
+    color: black;
+
+    h2 {
+        font-size: 40px;
+        margin: 0;
+        text-align: left;
+        text-transform: none;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 24px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+#sdt {
+    position: relative;
+    background: url(../img/sdt-color.png);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+    h2 {
+        font-size: 48px;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        max-width: 768px;
+        color: white;
+        text-transform: none;
+    }
+}
+
 #personas {
     background: url(../img/persona-drawing.jpg);
 }
 
 .finding {
     margin: 50px;
+
     .name {
         font-size: 24px;
         padding: 40px 30px;
@@ -191,6 +391,14 @@ section.cover {
         text-align: center;
         width: 25%;
         float: left;
+
+        @media only screen and (max-width: 768px) {
+            padding: 10px;
+            float: none;
+            margin: 0 auto;
+            width: 100%;
+            margin-bottom: 15px;
+        }
     }
 
     .desc {
@@ -200,6 +408,12 @@ section.cover {
 
         em {
             font-weight: bold;
+        }
+
+        @media only screen and (max-width: 768px) {
+            float: none;
+            margin-left: 0;
+            width: 100%;
         }
     }
 }
@@ -216,18 +430,23 @@ h3.subsection {
 .overview {
     margin-top: 20px;
 
-    @media only screen and (max-width: 500px) {
-        float: none;
-        width: 100%;
-        padding: 0;
+    @media only screen and (max-width: 768px) {
+        margin-left: 15px;
     }
-
     h3 {
-        font-size: 14px;
+        font-size: 16px;
         margin-top: 0;
         margin-left: 50px;
         width: 20%;
         float: left;
+
+        @media only screen and (max-width: 768px) {
+            float: none;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
     }
 
     p, ul {
@@ -235,6 +454,12 @@ h3.subsection {
         margin-bottom: 0;
         padding: 0;
         float: left;
+
+        @media only screen and (max-width: 768px) {
+            float: none;
+            width: 100%;
+            padding: 0;
+        }
     }
 
     ul {
@@ -332,52 +557,78 @@ h3.subsection {
     margin-bottom: 40px;
 
     .logo {
-        width: 50%;
+        width: 40%;
         height: 250px;
-        background-repeat: no-repeat !important;
-        background-position: 50% !important;
+        text-align: right;
         float: left;
+        text-align: center;
+
+        @media only screen and (max-width: 768px) {
+            display: block;
+            text-align: center;
+            float: none;
+            height: auto;
+            width: 100%;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-height: 100px;
+            }
+        }
     }
 
     .desc {
-        width: 50%;
+        width: 60%;
         float: left;
         padding-left: 50px;
         margin-bottom: 30px;
 
+        @media only screen and (max-width: 768px) {
+            padding-top: 50px;
+            float: none;
+            width: 100%;
+            padding-left: 10px;
+
+            .see {
+                padding-top: 20px;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+
         h3 {
             text-transform: none;
             font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            font-size: 32px;
             margin-top: 0;
             margin-bottom: 0;
         }
 
         h4 {
-            font-size: 12px;
-            margin-top: 0;
+            font-size: 14px;
+            margin-top: -5px;
             font-weight: normal;
-            font-style: italic;
         }
 
         p {
-            font-size: 14px;
+            font-size: 16px;
             margin-bottom: 5px;
         }
     }
 
-    &#books-and-crafts .logo {
-        background: url("../img/bac.png");
-        background-color: darken(#fbfcfc, 5%);
-    }
-
-    &#namegear .logo {
-        background: url("../img/namegear-logo.png");
-        background-color: darken(#fbfcfc, 5%);
-    }
-
-    &#transport-nsw .logo {
-        background: url("../img/transport-nsw-logo.png");
-    }
+    // &#books-and-crafts .logo {
+    //     background: url("../img/bac.png");
+    // }
+    //
+    // &#namegear .logo {
+    //     background: url("../img/namegear-logo.png");
+    // }
+    //
+    // &#transport-nsw .logo {
+    //     background: url("../img/transport-nsw-logo.png");
+    // }
 }
 
 #design-process {
@@ -397,10 +648,61 @@ h3.subsection {
 }
 
 #case-studies {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: #f4f6f7;
+    color: white;
     margin-bottom: 50px;
+}
+
+#ng-cs {
+    padding-top: 40px;
+    background: #00bcd4;
+    @media only screen and (max-width: 768px) {
+        padding-top: 30px;
+    }
+}
+
+.bc {
+    background: #ffc107;
+}
+
+.ng {
+    background: #00bcd4;
+}
+
+.ng, .bc {
+    color: white;
+    padding-bottom: 30px !important;
+
+    h1 {
+        text-align: left;
+        @media only screen and (max-width: 768px) {
+            padding-top: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    .subhead {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: -15px;
+        font-weight: normal;
+        font-style: normal;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 18px;
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+}
+
+#bc-cs {
+    padding-top: 40px;
+    background: #ffc107;
+    @media only screen and (max-width: 768px) {
+        padding-top: 30px;
+    }
 }
 
 #quote {
@@ -410,7 +712,6 @@ h3.subsection {
     padding: 50px 0;
     // font-style: italic;
     font-weight: 300;
-    font-family: 'Oswald', sans-serif;
 
     cite {
         margin-top: 20px;
@@ -476,7 +777,7 @@ h3.subsection {
 }
 
 h1 {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 70px;
     margin: 10px auto;
@@ -487,9 +788,9 @@ h2, h3 {
 }
 
 h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 28px;
-    border-top: 4px solid black;
+    font-weight: bold;
     padding-top: 15px;
     margin-top: 0;
 
@@ -499,7 +800,7 @@ h2 {
 
     &.subhead {
         font-family: "Open Sans";
-        margin-top: -20px;
+        margin-top: -10px;
         padding-top: 0;
         border: none;
         font-weight: 300;
@@ -511,7 +812,6 @@ h2 {
 }
 
 h3 {
-    font-family: 'Oswald', sans-serif;
     font-size: 16px;
 }
 
@@ -522,10 +822,10 @@ p {
 a {
     font-weight: bold;
     text-decoration: none;
-    color: #ff0096;
+    color: #8bc34a;
 
     &:hover {
-        border-bottom: 2px solid;
+        border-bottom: 5px solid;
     }
 }
 
@@ -535,6 +835,7 @@ a {
 }
 
 #contact-methods ul {
+    margin-top: 75px;
     text-align: center;
     font-size: 18px;
     list-style-type: none;

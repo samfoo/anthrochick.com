@@ -16,6 +16,7 @@
 
         <%= stylesheet_link_tag 'site', relative: true %>
 
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,700italic' rel='stylesheet' type='text/css'>
@@ -27,7 +28,39 @@
     </head>
     <body>
         <div id="content">
+            <h1 id="header">Anthrochick</h1>
+
+            <ul id="menu">
+                <div>
+                    <li class="<%= current_page.path == 'index.html' ? 'current' : ''%>"><a href="./index.html">Home</a></li>
+                    <li class="<%= current_page.path == 'work.html' ? 'current' : ''%>"><a href="./work.html">Work</a></li>
+                    <!-- <li>Research</li> -->
+                    <!-- <li>Services</li> -->
+                    <li class="<%= current_page.path == 'dreams.html' ? 'current' : ''%>"><a href="./dreams.html">Dreams</a></li>
+                    <!-- <li>Contact</li> -->
+                </div>
+            </ul>
+
             <%= yield %>
+
+            <section class="boxed">
+                <div id="contact-methods">
+                    <ul>
+                        <li>
+                            <p>
+                            Send me an email!
+                            </p>
+                            <a href="mailto:zoe@anthrochick.com">zoe@anthrochick.com</a>
+                        </li>
+
+                        <li id="linkedin">
+                            <a href="https://au.linkedin.com/in/zoerosen">
+                                <span class="fa fa-linkedin-square"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
 
         <script src="js/plugins.js"></script>
