@@ -4,8 +4,16 @@
     @include box-sizing(border-box);
 }
 
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
 body {
     margin: 0 auto;
+    width: 100%;
 }
 
 .boxed {
@@ -70,14 +78,23 @@ section.cover {
     color: white;
     padding: 50px;
     padding-bottom: 80px;
+
     h1 {
         text-align: left;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 32px;
+        }
     }
 
     h2 {
         text-transform: none;
         margin: 0;
         text-align: left;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -94,12 +111,20 @@ section.cover {
     h3 {
         font-style: italic;
         text-transform: none;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 
     h2 {
         text-transform: none;
         text-align: center;
         font-size: 60px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 32px;
+        }
     }
 }
 
@@ -196,6 +221,8 @@ h1#header {
 
         @media only screen and (max-width: 768px) {
             text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
         }
     }
 
@@ -303,7 +330,7 @@ h1#header {
 }
 
 #natgeo {
-    background: url(../img/zoe-rs-color.png);
+    background: url(../img/zoe-rs-color.jpg);
     color: white;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     text-align: right;
@@ -324,18 +351,26 @@ h1#header {
         margin: 0;
         text-transform: none;
         font-weight: bold;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     p {
         font-size: 24px;
         padding-top: 20px;
         padding-bottom: 20px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 }
 
 #parrots {
-    height: 50vh;
-    background: url(../img/cockatoo-color.png);
+    height: 70vh;
+    background: url(../img/cockatoo-color.jpg);
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center center;
@@ -347,18 +382,26 @@ h1#header {
         text-align: left;
         text-transform: none;
         font-weight: bold;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 24px;
+        }
     }
 
     p {
         font-size: 24px;
         padding-top: 20px;
         padding-bottom: 20px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 }
 
 #sdt {
     position: relative;
-    background: url(../img/sdt-color.png);
+    background: url(../img/sdt-color.jpg);
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 
     h2 {
@@ -372,6 +415,10 @@ h1#header {
         max-width: 768px;
         color: white;
         text-transform: none;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 32px;
+        }
     }
 }
 
