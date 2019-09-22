@@ -321,6 +321,10 @@ h1#header {
     margin: 50px auto;
 }
 
+#cochlear-interview {
+    background: url(../img/cochlear-interview.jpg);
+}
+
 #research {
     background: url(../img/zoe-interview.jpg);
 }
@@ -699,12 +703,24 @@ h3.subsection {
     margin-bottom: 50px;
 }
 
+#c-cs {
+    padding-top: 40px;
+    background: #2c3e50;
+    @media only screen and (max-width: 768px) {
+        padding-top: 30px;
+    }
+}
+
 #ng-cs {
     padding-top: 40px;
     background: #00bcd4;
     @media only screen and (max-width: 768px) {
         padding-top: 30px;
     }
+}
+
+.c {
+    background: #2c3e50;
 }
 
 .bc {
@@ -715,7 +731,7 @@ h3.subsection {
     background: #00bcd4;
 }
 
-.ng, .bc {
+.ng, .bc, .c {
     color: white;
     padding-bottom: 30px !important;
 
@@ -905,4 +921,8 @@ a {
 
     font-size: 14px;
     margin-top: 20px;
+}
+
+.wh {
+    padding: 20px;
 }
